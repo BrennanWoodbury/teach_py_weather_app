@@ -45,7 +45,3 @@ class TextTheForecast(TextMe):
                 break
         if send == False:
             print("No message was sent")
-
-
-t = TextTheForecast("+14358300726")
-t.text_if_snow()
