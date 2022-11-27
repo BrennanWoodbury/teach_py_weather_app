@@ -35,7 +35,7 @@ class TextTheForecast(TextMe):
             body=message, from_="+15618165335", to=send_to
         )
 
-    def evaluate_data(self, data, message):
+    def evaluate_data(self, data: list, message: str):
         send = False
         for i in data:
             if i > 0:
