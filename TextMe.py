@@ -36,11 +36,15 @@ class TextTheForecast(TextMe):
         )
 
     def evaluate_data(self, data, message):
+        send = False
         for i in data:
             if i > 0:
                 self.message = message
                 self.send_forecast(self.message, self.send_to)
+                send = True
                 break
+        if send == False:
+            print("No message was sent")
 
 
 t = TextTheForecast("+14358300726")
